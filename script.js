@@ -13,7 +13,14 @@ const lookup = {
 function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
-
+	for (let index = 0; index < encodedStr.length; index++) {
+			if(encodedStr.charAt(index)==' '){
+				decodedArr[index]=' ';
+			}
+		else{
+			decodedArr[index]=lookup[index].encodedStr.charAt(index);
+		}
+	}
   return ;//return decodedArr
 }
 
